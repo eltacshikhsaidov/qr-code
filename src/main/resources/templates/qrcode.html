@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code</title>
+</head>
+<body>
+<h1 style="text-align: center;">Qr Code Generator</h1>
+
+<div>
+    <form action="/">
+        <input placeholder="enter url..." name="url">
+        <button type="submit">submit</button>
+    </form>
+</div>
+
+
+<div style="width:40%;display: inline-block">
+    <h3>Qr Code using Byte Array</h3>
+    <p>Entered url : <span th:text="${medium}"></span></p>
+    <img th:src="${'data:image/png;base64,' + qrcode}" alt="QR Code" height="250" width="250">
+</div>
+
+</body>
+</html>
