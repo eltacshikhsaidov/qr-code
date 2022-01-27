@@ -1,31 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <title>QR Code</title>
-</head>
-<body>
-<h1 style="text-align: center;">Qr Code Generator</h1>
-
-<div>
-    <form action="/">
-        <input placeholder="enter url..." name="url">
-        <button type="submit">submit</button>
-    </form>
-</div>
-
-
-<div style="width:40%;display: inline-block">
-    <h3>Qr Code using Byte Array</h3>
-    <p>Entered url : <span th:text="${medium}"></span></p>
-    <img th:src="${'data:image/png;base64,' + qrcode}" alt="QR Code" height="250" width="250">
-</div>
-
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html dir="ltr" lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
   <head>
@@ -63,10 +35,18 @@
             <div style="display: inline-block; margin-top: 10%;">
                 <h3>Generated Qr Code</h3>
                 <p>Entered url : <span th:text="${url}"></span></p>
-                <img th:src="${'data:image/png;base64,' + qrcode}" style="border-radius: 5px;" alt="QR Code" height="250" width="250">
+                <img th:src="${'data:image/png;base64,' + qrcode}"
+                    style="border-radius: 5px;"
+                    alt="QR Code" height="250" width="250"
+                    id="image">
             </div>
+        </div>
+        <div class="footer">
+            <button id="wpButton" type="button"><i class="fa fa-whatsapp"></i>Share via whatsapp</button>
         </div>
     </div>
     
+
+    <script src="./script.js"></script>
 </body>
 </html>
