@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
@@ -21,5 +21,52 @@
     <img th:src="${'data:image/png;base64,' + qrcode}" alt="QR Code" height="250" width="250">
 </div>
 
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8">
+    <title> QR Code Generator</title>-
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+        <i class="fa fa-qrcode"></i>
+        </div>
+        <div class="bottom">
+        <div class="info">
+            Generate any text into qr code writing below
+        </div>
+        <form action="/">
+            <div class="input-box">
+            <input type="text" placeholder="Enter url..." name="url" required>
+            </div>
+            <div class="input-box">
+            <input type="submit" value="generate">
+            </div>
+        </form>
+        <div class="footer">
+            Share with your friends :)
+        </div>
+        </div>
+    </div>
+
+    <div class="wrapper" style="margin-top: 430px;">
+        <div class="info">
+            <div style="display: inline-block; margin-top: 10%;">
+                <h3>Generated Qr Code</h3>
+                <p>Entered url : <span th:text="${url}"></span></p>
+                <img th:src="${'data:image/png;base64,' + qrcode}" style="border-radius: 5px;" alt="QR Code" height="250" width="250">
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>

@@ -34,7 +34,7 @@ public class MainController {
         // Convert Byte Array into Base64 Encode String
         String qrcode = Base64.getEncoder().encodeToString(image);
 
-        model.addAttribute("medium",url);
+        model.addAttribute("url",url);
         model.addAttribute("qrcode",qrcode);
 
         return "qrcode";
