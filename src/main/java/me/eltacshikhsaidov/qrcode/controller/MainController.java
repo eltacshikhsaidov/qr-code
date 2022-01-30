@@ -18,10 +18,9 @@ public class MainController {
     public String getQRCode(Model model,
                             @RequestParam(name = "url", 
                             required = true,
-                            defaultValue = "https://example.com")
+                            defaultValue = "https://example.com/")
                             String url){
-        // String medium="https://rahul26021999.medium.com/";
-
+                                
         byte[] image = new byte[0];
         try {
 
